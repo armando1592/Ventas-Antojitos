@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lunatic - Iniciar Sesión</title>
+    <title>Antojitos Dulce y Deleite Iniciar Sesión</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
         * {
@@ -603,8 +603,8 @@
                     <div class="brand-icon">
                         <i class="fas fa-shopping-bag"></i>
                     </div>
-                    <h1>FASHION LUNATIC</h1>
-                    <p>Tu tienda con estilo y eficiencia.</p>
+                    <h1>Antojitos Dulce Deleite</h1>
+                    <p>Sabores Unicos</p>
                     
                     <div class="features-list">
                         <div class="feature-item">
@@ -630,7 +630,7 @@
             <!-- Panel del formulario derecho -->
             <div class="login-form-section">
                 <div class="form-header">
-                    <h2>Bienvenido a Lunatic</h2>
+                    <h2>Bienvenido a Antojitos Dulce y Deleite</h2>
                     <p>Ingresa tus credenciales para acceder al sistema</p>
                 </div>
 
