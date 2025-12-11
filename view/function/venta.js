@@ -67,16 +67,16 @@ async function cargarCarrito() {
         tbody.innerHTML = '';
         let subtotal = 0;
         if (json.status && json.data.length > 0) {
-            json.data.forEach(item => {
-                let total = item.precio * item.cantidad;
+            json.data.forEach(t_venta => {
+                let total = t_venta.precio * t_venta.cantidad;
                 subtotal += total;
                 let fila = document.createElement('tr');
                 fila.innerHTML = `
-                    <td>${item.nombre_producto}</td>
-                    <td><input type="number" class="quantity-input" value="${item.cantidad}" onchange="actualizarCantidad(${item.id}, this.value)"></td>
-                    <td>S/ ${item.precio}</td>
+                    <td>${t_venta.nombre_producto}</td>
+                    <td><input type="number" class="quantity-input" value="${t_venta.cantidad}" onchange="actualizarCantidad(${t_venta.id}, this.value)" onkeyup="actualizarCantidadTemporal(${t_venta.id})"></td>
+                    <td>S/ ${t_venta.precio}</td>
                     <td>S/ ${total.toFixed(2)}</td>
-                    <td><button class="btn-remove" onclick="eliminarDelCarrito(${item.id})">×</button></td>
+                    <td><button class="btn-remove" onclick="eliminarDelCarrito(${t_venta.id})">×</button></td>
                 `;
                 tbody.appendChild(fila);
             });
@@ -138,3 +138,5 @@ async function eliminarDelCarrito(id) {
         }
     }
 }
+ 
+//
