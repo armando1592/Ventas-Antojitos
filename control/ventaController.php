@@ -23,4 +23,28 @@ if ($tipo == "registrarTemporal") {
         $respuesta = array('status' => true, 'msg' => 'registrado');
     }
     echo json_encode($respuesta);
+} elseif ($tipo == "listarTemporales") {
+    $respuesta = array('status' => false, 'msg' => 'fallo el controlador');
+    $temporales = $objVenta->buscarTemporales();
+    if ($temporales) {
+        $respuesta = array('status' => true, 'data' => $temporales);
+    }
+    echo json_encode($respuesta);
+} elseif ($tipo == "actualizarCantidadTemporal") {
+    $respuesta = array('status' => false, 'msg' => 'fallo el controlador');
+    $id = $_POST['id'];
+    $cantidad = $_POST['cantidad'];
+    $actualizado = $objVenta->actualizarCantidadTemporal($id, $cantidad);
+    if ($actualizado) {
+        $respuesta = array('status' => true, 'msg' => 'cantidad actualizada');
+    }
+    echo json_encode($respuesta);
+} elseif ($tipo == "eliminarTemporal") {
+    $respuesta = array('status' => false, 'msg' => 'fallo el controlador');
+    $id = $_POST['id'];
+    $eliminado = $objVenta->eliminarTemporal($id);
+    if ($eliminado) {
+        $respuesta = array('status' => true, 'msg' => 'producto eliminado');
+    }
+    echo json_encode($respuesta);
 }

@@ -383,5 +383,9 @@
             agregar_producto_temporal();
         }
     })
+
+    document.addEventListener('DOMContentLoaded', function() {
+        cargarCarrito();
+    });
 </script>
 

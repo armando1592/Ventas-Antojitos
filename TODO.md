@@ -1,9 +1,9 @@
 - [x] Update model/VentaModel.php: Modify buscarTemporales to join with productos table for product name
-- [ ] Update control/ventaController.php: Add case for 'listarTemporales' to return temporals as JSON
-- [ ] Update control/ventaController.php: Add case for 'actualizarCantidadTemporal' to update quantity
-- [ ] Update control/ventaController.php: Add case for 'eliminarTemporal' to remove product from cart
-- [ ] Update view/function/venta.js: Add cargarCarrito function to load and display cart
-- [ ] Update view/function/venta.js: Add actualizarCantidad function to update quantity
-- [ ] Update view/function/venta.js: Add eliminarDelCarrito function to remove product
-- [ ] Update view/function/venta.js: Modify agregar_producto_temporal to reload cart after adding
-- [ ] Update view/vendedor.php: Add DOMContentLoaded event to load cart on page load
+- [x] Update control/ventaController.php: Add case for 'listarTemporales' to return temporals as JSON
+- [x] Update control/ventaController.php: Add case for 'actualizarCantidadTemporal' to update quantity
+- [x] Update control/ventaController.php: Add case for 'eliminarTemporal' to remove product from cart
+- [x] Update view/function/venta.js: Add cargarCarrito function to load and display cart
+- [x] Update view/function/venta.js: Add actualizarCantidad function to update quantity
+- [x] Update view/function/venta.js: Add eliminarDelCarrito function to remove product
+- [x] Update view/function/venta.js: Modify agregar_producto_temporal to reload cart after adding
+- [x] Update view/vendedor.php: Add DOMContentLoaded event to load cart on page load
