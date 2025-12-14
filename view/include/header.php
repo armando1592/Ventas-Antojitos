@@ -343,12 +343,7 @@
                             <span>Proveedor</span>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?= BASE_URL ?>vista-cliente">
-                            <span class="nav-icon">👀</span>
-                            <span>Vista Cliente</span>
-                        </a>
-                    </li>
+                   
                     <li class="nav-item">
                         <a class="nav-link" href="<?= BASE_URL ?>vendedor">
                             <span class="nav-icon">💼</span>
