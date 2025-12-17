@@ -1,9 +1,18 @@
-- [x] Update model/VentaModel.php: Modify buscarTemporales to join with productos table for product name
-- [x] Update control/ventaController.php: Add case for 'listarTemporales' to return temporals as JSON
-- [x] Update control/ventaController.php: Add case for 'actualizarCantidadTemporal' to update quantity
-- [x] Update control/ventaController.php: Add case for 'eliminarTemporal' to remove product from cart
-- [x] Update view/function/venta.js: Add cargarCarrito function to load and display cart
-- [x] Update view/function/venta.js: Add actualizarCantidad function to update quantity
-- [x] Update view/function/venta.js: Add eliminarDelCarrito function to remove product
-- [x] Update view/function/venta.js: Modify agregar_producto_temporal to reload cart after adding
-- [x] Update view/vendedor.php: Add DOMContentLoaded event to load cart on page load
+# TODO: Implementar Boleta de Comprobante para Ventas
+
+## Información Recopilada
+- El registro de venta se realiza en `control/ventaController.php` en el tipo "registrar_venta".
+- Después de éxito, retorna JSON con status true y mensaje 'venta registrada con exito'.
+- Se necesita generar una boleta después del registro exitoso.
+- Modificar `view/function/venta.js` para llamar a generar boleta después de éxito.
+
+## Plan de Implementación
+- [ ] Agregar método en `model/VentaModel.php` para obtener detalles de venta por ID.
+- [ ] Agregar tipo "generar_boleta" en `control/ventaController.php` que genere la boleta HTML/PDF.
+- [ ] Crear vista `view/boleta.php` para mostrar la boleta.
+- [ ] Modificar `view/function/venta.js` en `realizarVenta()` para abrir la boleta después de éxito.
+- [ ] Probar la generación de boleta.
+
+## Pasos de Seguimiento
+- [ ] Instalar librería para PDF si es necesario (ej. FPDF).
+- [ ] Verificar que la boleta incluya: código de venta, fecha, productos, totales, cliente, vendedor.
